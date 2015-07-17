@@ -10,13 +10,15 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @since Bootship 0.1
+ * @since WHISPA 0.1
  */
 
 get_header(); ?>
+<!---contenu de cours-->
+	<div class="container">
+		<div id="primary" class="row">
+			<div class="site-content col-sm-8">
 
-	<div id="primary" class="col-sm-8 content-area">
-		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>
@@ -24,14 +26,15 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php bootship_paging_nav(); ?>
+			<?php whispa_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 		<?php endif; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div>
+			<?php get_sidebar(); ?>
+		</div>
+	</div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

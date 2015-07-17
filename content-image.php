@@ -3,7 +3,7 @@
  * The template for displaying posts in the Image post format
  *
  * @package WordPress
- * @since Bootship 0.1
+ * @since WHISPA 0.1
  */
 ?>
 
@@ -19,19 +19,19 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'bootship' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bootship' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'whispa' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'whispa' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
-		<?php bootship_entry_meta(); ?>
+		<?php whispa_entry_meta(); ?>
 
 		<?php if ( comments_open() && ! is_single() ) : ?>
 		<span class="comments-link">
-			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'bootship' ) . '</span>', __( 'One comment so far', 'bootship' ), __( 'View all % comments', 'bootship' ) ); ?>
+			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'whispa' ) . '</span>', __( 'One comment so far', 'whispa' ), __( 'View all % comments', 'whispa' ) ); ?>
 		</span><!-- .comments-link -->
 		<?php endif; // comments_open() ?>
-		<?php edit_post_link( __( 'Edit', 'bootship' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'whispa' ), '<span class="edit-link">', '</span>' ); ?>
 
 		<?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 			<?php get_template_part( 'author-bio' ); ?>

@@ -1,5 +1,5 @@
 /**
- * Functionality specific to Bootship.
+ * Functionality specific to whispa.
  *
  * Provides helper functions to enhance the theme experience.
  */
@@ -85,12 +85,12 @@
 			return;
 		}
 
-		button.on( 'click.bootship', function() {
+		button.on( 'click.WHISPA', function() {
 			nav.toggleClass( 'toggled-on' );
 		} );
 
 		// Better focus for hidden submenu items for accessibility.
-		menu.find( 'a' ).on( 'focus.bootship blur.bootship', function() {
+		menu.find( 'a' ).on( 'focus.WHISPA blur.WHISPA', function() {
 			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		} );
 	} )();
@@ -101,7 +101,7 @@
 	 *
 	 * @link http://www.nczonline.net/blog/2013/01/15/fixing-skip-to-content-links/
 	 */
-	_window.on( 'hashchange.bootship', function() {
+	_window.on( 'hashchange.WHISPA', function() {
 		var element = document.getElementById( location.hash.substring( 1 ) );
 
 		if ( element ) {

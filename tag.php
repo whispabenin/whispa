@@ -7,36 +7,43 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @since Bootship 0.1
+ * @since WHISPA 0.1
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div class="container">
+		<div id="primary" class="row">
+			<div class="site-content col-sm-8">
+				<div class="row">
+					<div class="col-sm-12">
 
-		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'bootship' ), single_tag_title( '', false ) ); ?></h1>
+					<?php if ( have_posts() ) : ?>
+						<header class="archive-header">
+							<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'whispa' ), single_tag_title( '', false ) ); ?></h1>
 
-				<?php if ( tag_description() ) : // Show an optional tag description ?>
-				<div class="archive-meta"><?php echo tag_description(); ?></div>
-				<?php endif; ?>
-			</header><!-- .archive-header -->
+							<?php if ( tag_description() ) : // Show an optional tag description ?>
+							<div class="archive-meta"><?php echo tag_description(); ?></div>
+							<?php endif; ?>
+						</header><!-- .archive-header -->
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+						<?php /* The loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php get_template_part( 'content', get_post_format() ); ?>
+						<?php endwhile; ?>
 
-			<?php bootship_paging_nav(); ?>
+						<?php whispa_paging_nav(); ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+					<?php else : ?>
+						<?php get_template_part( 'content', 'none' ); ?>
+					<?php endif; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+					</div>
+				</div>
+			</div>
+			<?php get_sidebar(); ?>
 
-<?php get_sidebar(); ?>
+		</div>
+	</div>
+	
 <?php get_footer(); ?>

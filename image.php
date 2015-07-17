@@ -5,7 +5,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @since Bootship 0.1
+ * @since WHISPA 0.1
  */
 
 get_header(); ?>
@@ -18,7 +18,7 @@ get_header(); ?>
 
 					<div class="entry-meta">
 						<?php
-							$published_text = __( '<span class="attachment-meta">Published on <time class="entry-date" datetime="%1$s">%2$s</time> in <a href="%3$s" title="Return to %4$s" rel="gallery">%5$s</a></span>', 'bootship' );
+							$published_text = __( '<span class="attachment-meta">Published on <time class="entry-date" datetime="%1$s">%2$s</time> in <a href="%3$s" title="Return to %4$s" rel="gallery">%5$s</a></span>', 'whispa' );
 							$post_title = get_the_title( $post->post_parent );
 							if ( empty( $post_title ) || 0 == $post->post_parent )
 								$published_text = '<span class="attachment-meta"><time class="entry-date" datetime="%1$s">%2$s</time></span>';
@@ -34,26 +34,26 @@ get_header(); ?>
 							$metadata = wp_get_attachment_metadata();
 							printf( '<span class="attachment-meta full-size-link"><a href="%1$s" title="%2$s">%3$s (%4$s &times; %5$s)</a></span>',
 								esc_url( wp_get_attachment_url() ),
-								esc_attr__( 'Link to full-size image', 'bootship' ),
-								__( 'Full resolution', 'bootship' ),
+								esc_attr__( 'Link to full-size image', 'whispa' ),
+								__( 'Full resolution', 'whispa' ),
 								$metadata['width'],
 								$metadata['height']
 							);
 
-							edit_post_link( __( 'Edit', 'bootship' ), '<span class="edit-link">', '</span>' );
+							edit_post_link( __( 'Edit', 'whispa' ), '<span class="edit-link">', '</span>' );
 						?>
 					</div><!-- .entry-meta -->
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
 					<nav id="image-navigation" class="navigation image-navigation" role="navigation">
-						<span class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'bootship' ) ); ?></span>
-						<span class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'bootship' ) ); ?></span>
+						<span class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'whispa' ) ); ?></span>
+						<span class="nav-next"><?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'whispa' ) ); ?></span>
 					</nav><!-- #image-navigation -->
 
 					<div class="entry-attachment">
 						<div class="attachment">
-							<?php bootship_the_attached_image(); ?>
+							<?php whispa_the_attached_image(); ?>
 
 							<?php if ( has_excerpt() ) : ?>
 							<div class="entry-caption">
@@ -66,7 +66,7 @@ get_header(); ?>
 					<?php if ( ! empty( $post->post_content ) ) : ?>
 					<div class="entry-description">
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'bootship' ), 'after' => '</div>' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'whispa' ), 'after' => '</div>' ) ); ?>
 					</div><!-- .entry-description -->
 					<?php endif; ?>
 
