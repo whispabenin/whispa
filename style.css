@@ -1099,3 +1099,8 @@ form#inscription_form h2 {
 	border: 1px solid rgba(240, 36, 117, 0.2);
 	padding: 1%;
 }
+/* Pour les menus actifs */
+.current-menu-item a {
+	color: #F02475;
+	text-decoration: underline;
+}
