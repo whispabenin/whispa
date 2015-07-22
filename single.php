@@ -8,16 +8,14 @@
 
 get_header(); ?>
 
-	<div class="container">
-		<div id="primary" class="row">
+	<div class="row">
+		<div id="primary" class="container">
 			<div class="site-content col-sm-8">
-				<article class="row post">
-					<div class="col-sm-12">
 
 					<?php /* The loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<article class="row post">
+						<article class="row post content">
 							<div class="col-sm-12">
 								<h1 class="entry-title"><?php the_title(); ?></h1>
 								<p class="entry-meta"><?php whispa_entry_meta(); ?></p>
@@ -30,12 +28,10 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					</div>
-				</article>
 			</div>
 			<?php get_sidebar(); ?>
 
 		</div>
 	</div>
-	
+
 <?php get_footer(); ?>

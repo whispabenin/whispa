@@ -272,11 +272,11 @@ function whispa_paging_nav() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'whispa' ) ); ?></div>
+			<div class="nav-previous more"><?php next_posts_link( __( '<span class="meta-nav">&laquo;</span> Articles précédents', 'whispa' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'whispa' ) ); ?></div>
+			<div class="nav-next more pull-right"><?php previous_posts_link( __( 'Articles suivants <span class="meta-nav">&raquo;</span>', 'whispa' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -328,10 +328,10 @@ function whispa_entry_meta() {
 		whispa_entry_date();
 
 	// Translators: used between list items, there is a space after the comma.
-	$categories_list = get_the_category_list( __( ', ', 'whispa' ) );
-	if ( $categories_list ) {
-		echo ' dans <span class="categories-links">' . $categories_list . '</span>';
-	}
+	// $categories_list = get_the_category_list( __( ', ', 'whispa' ) );
+	// if ( $categories_list ) {
+	// 	echo ' dans <span class="categories-links">' . $categories_list . '</span>';
+	// }
 
 	// Post author
 	if ( 'post' == get_post_type() ) {

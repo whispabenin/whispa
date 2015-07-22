@@ -748,26 +748,23 @@ hr {
 	font-size: 12px;
 	margin-bottom: 15px;
 }
-#primary{
-	margin-top:60px;
-}
-.post{
-	margin-bottom:60px;
-}
+
 .search {
 
 	border: 1px solid #CCC;
 	position: relative;
-	height:31px;
-	margin-bottom:65px;
+	height: 35px;
+	margin-bottom: 25px;
 
 }
  .search input[type="text"] {
  	border: none;
- 	width: 100%;
+ 	width: 90%;
+ 	/*width: calc(100% - 87px);*/
  	padding-left:5px;
  	padding-right:52px;
  	font-size: 12px;
+ 	height: 100%;
 }
 .search input[type="submit"] {
  	background-color: #16B84E;
@@ -776,6 +773,7 @@ hr {
  	position: absolute;
  	right:0;
  	padding: 5px 10px;
+ 	height: 100%;
 }
 .blog_sociaux li{
 
@@ -991,7 +989,7 @@ form#inscription_form h2 {
 	margin-right: 10px;
 }
 #footer #copyright {
-	margin-top: 4%;
+	margin-top: 8%;
 }
 
 #footer a {
@@ -1075,4 +1073,29 @@ form#inscription_form h2 {
 }
 
 @media (min-width: 1200px) {
+}
+
+/* improve style */
+#primary{
+	margin-top: 30px;
+}
+.post{
+	margin-bottom: 20px;
+}
+.site-content {
+	padding-bottom: 3%;
+}
+.site-content .sticky{
+	border: 1px solid rgba(240, 36, 117, 0.2);
+	padding: 1%;
+}
+.site-content .post p {
+	width: 100%;
+}
+.site-content .post img {
+	padding-bottom: 3%;
+}
+.site-content article.post.content {
+	border: 1px solid rgba(240, 36, 117, 0.2);
+	padding: 1%;
 }

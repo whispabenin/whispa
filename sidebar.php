@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * The sidebar containing the secondary widget area
  *
@@ -10,8 +10,8 @@
  * @since WHISPA 0.1
  */
  ?>
-		<div class="col-sm-4">
-			<p>Recevoir par email les dernières nouvelles de WHISPA 
+		<div class=" col-sm-offset-1 col-sm-3">
+			<p>Recevoir par email les dernières nouvelles de WHISPA
 			<form class="search">
 				<input type="text" placeholder="Email">
 	       		<input type="submit" value="S'abonner">
