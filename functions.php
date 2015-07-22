@@ -153,6 +153,24 @@ function whispa_scripts_styles() {
 	wp_enqueue_script( 'whispa-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-08-09', true );
 	wp_enqueue_script( 'whispa-bootstrapjs', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.2.0', true );
 
+/* Load our scripts */
+if ( (is_page_template('whispa-inscription.php')) || (is_page_template('whispa-contact.php')) ) {
+	wp_enqueue_script( 'whispa-parsleyjs', get_template_directory_uri() . '/js/parsley.js', array( 'jquery' ), '3.2.0', true );
+	wp_enqueue_script( 'whispa-parsleyi18nfrjs', get_template_directory_uri() . '/js/i18n/fr.js', array( 'jquery' ), '3.2.0', true );
+}
+
+if ( is_page_template('whispa-inscription.php') ) {
+	wp_enqueue_script( 'whispa-bootstrapdatapickerjs', get_template_directory_uri() . '/js/bootstrap-datepicker3.min.js', array( 'jquery' ), '3.2.0', true );
+	wp_enqueue_script( 'whispa-bootstrapdatapickerfrjs', get_template_directory_uri() . '/js/bootstrap-datepicker3.fr.min.js', array( 'jquery' ), '3.2.0', true );
+	wp_enqueue_script( 'whispa-inscriptionjs', get_template_directory_uri() . '/js/inscription.js', array( 'jquery' ), '3.2.0', true );
+}
+
+if ( is_page_template('whispa-contact.php') ) {
+	wp_enqueue_script( 'whispa-contactjs', get_template_directory_uri() . '/js/contact.js', array( 'jquery' ), '3.2.0', true );
+}
+/* End our scripts loading */
+
+
 	// Add Source Sans Pro and Open Sans fonts, used in the main stylesheet.
 	wp_enqueue_style( 'whispa-fonts', whispa_fonts_url(), array(), null );
 
@@ -164,6 +182,8 @@ function whispa_scripts_styles() {
 	wp_enqueue_style( 'whispa-bootstrapcss', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.2.0' );
 	wp_enqueue_style( 'whispa-fontawesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '3.2.0' );
 	wp_enqueue_style( 'whispa-icomoon', get_template_directory_uri() . '/css/icomoon.css', array(), '3.2.0' );
+	wp_enqueue_style( 'whispa-parsleycss', get_template_directory_uri() . '/css/parsley.css', array(), '3.2.0' );
+	wp_enqueue_style( 'whispa-bootstrapdatapickercss', get_template_directory_uri() . '/css/bootstrap-datepicker3.min.css', array(), '3.2.0' );
 	wp_enqueue_style( 'whispa-style', get_stylesheet_uri(), array(), '2014-08-09' );/*mettre la derniere date de validation*/
 
 	// Loads the Internet Explorer specific stylesheet.
@@ -528,16 +548,3 @@ function whispa_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'whispa_customize_register' );
-
-/**
- * Enqueue Javascript postMessage handlers for the Customizer.
- *
- * Binds JavaScript handlers to make the Customizer preview
- * reload changes asynchronously.
- *
- * @since WHISPA 0.1
- */
-function whispa_customize_preview_js() {
-	wp_enqueue_script( 'whispa-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
-}
-add_action( 'customize_preview_init', 'whispa_customize_preview_js' );

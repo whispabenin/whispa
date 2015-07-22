@@ -907,8 +907,8 @@ textarea#message{
 }
 
 ul.partenaires li{
-	display: inline-block;
-	padding-right: 3px;
+/*	display: inline-block;
+	padding-right: 3px;*/
 }
 
 a.btnRose:hover,

@@ -11,6 +11,7 @@
  *
  * @package WordPress
  * @since WHISPA 0.1
+ * Template Name: front-page
  */
 
 get_header(); ?>

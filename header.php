@@ -31,7 +31,8 @@
 
 <body <?php body_class(); ?>>
 	<?php
-  if (is_front_page() || is_home()){
+  /* if (is_front_page() || is_home()){ */
+  if (is_front_page()){
 	 ?>
 	<div id="header" class="home">
 		<div id="overlay">
@@ -55,7 +56,7 @@
 						<div class="col-margin">
 							<h1 class="header-title">Deviens experte en programmation, marketing et design</h1>
 								<br>
-								<a href="inscription.html" class="btnRose">Inscris-toi gratuitement</a>
+								<a href="<?php echo home_url(); ?>/inscription" class="btnRose">Inscris-toi gratuitement</a>
          		</div>
 				</div>
       </div>
@@ -115,7 +116,7 @@
 				            <h1 class="header-program">Deviens experte en programmation, marketing et design.</h1>
 				          </div>
 				          <div class="col-md-4 col-md-offset-3 col-xs-12 col-sm-5 ">
-				            <a href="inscription.html" class="btnRose">Inscris-toi gratuitement</a>
+				            <a href="<?php echo home_url(); ?>/inscription" class="btnRose">Inscris-toi gratuitement</a>
 				          </div>
 				        </div>
 					</div>
