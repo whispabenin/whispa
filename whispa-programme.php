@@ -43,7 +43,7 @@ get_header(); ?>
     </div>
     <div class="container">
       <div class=" break">
-        <a href="inscription.html" class="btnRose">Rejoins-nous maintenant</a>
+        <a href="<?php echo home_url(); ?>/inscription" class="btnRose">Rejoins-nous maintenant</a>
       </div>
     </div>
   </div>
