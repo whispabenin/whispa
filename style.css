@@ -1104,3 +1104,8 @@ form#inscription_form h2 {
 	color: #F02475;
 	text-decoration: underline;
 }
+
+
+.comment-respond label {
+  width: 15em;
+}
