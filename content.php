@@ -34,7 +34,7 @@ $class = array(
 		<footer class="entry-meta">
 			<?php if ( comments_open() && ! is_single() ) : ?>
 				<div class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'whispa' ) . '</span>', __( 'One comment so far', 'whispa' ), __( 'View all % comments', 'whispa' ) ); ?>
+					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Laisser un commentaire', 'whispa' ) . '</span>', __( 'One comment so far', 'whispa' ), __( 'View all % comments', 'whispa' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</footer><!-- .entry-meta -->
