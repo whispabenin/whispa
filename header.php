@@ -26,6 +26,39 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
+  <?php
+  /* if (is_front_page() || is_home()){ */
+    if (is_front_page()){
+    ?>
+    <meta property="og:title" content="Women High Impact Startup Preparation Academy (WHISPA)" />
+    <meta property="og:description" content="Deviens experte en programmation, marketing et design" />
+    <?php
+    }
+    elseif ( is_page_template('whispa-inscription.php')) {
+     ?>
+      <meta property="og:title" content="WHISPA inscription" />
+      <meta property="og:description" content="Remplissez le formulaire pour vous inscrire au programme" />
+    <?php
+    }
+    elseif ( is_page_template('whispa-contact.php')) {
+     ?>
+      <meta property="og:title" content="WHISPA contact" />
+      <meta property="og:description" content="Envie d'en savoir plus? Contactez nous." />
+    <?php
+    }
+    elseif ( is_page_template('whispa-blog.php')) {
+     ?>
+      <meta property="og:title" content="WHISPA blog" />
+      <meta property="og:description" content="Bienvenue sur notre blog. Soyez informés de nos activités." />
+    <?php
+    }
+    else {
+     ?>
+
+    <?php
+    }
+  ?>
+
 	<?php wp_head(); ?>
 </head>
 
