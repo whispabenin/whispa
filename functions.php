@@ -153,7 +153,7 @@ function whispa_scripts_styles() {
 
 	//loads jquery with cdn (from google)
 	wp_deregister_script('jquery');
-  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
   wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'whispa-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-08-09', true );
@@ -166,8 +166,8 @@ if ( (is_page_template('whispa-inscription.php')) || (is_page_template('whispa-c
 }
 
 if ( is_page_template('whispa-inscription.php') ) {
-	wp_enqueue_script( 'whispa-bootstrapdatapickerjs', get_template_directory_uri() . '/js/bootstrap-datepicker3.min.js', array( 'jquery' ), '3.2.0', true );
-	wp_enqueue_script( 'whispa-bootstrapdatapickerfrjs', get_template_directory_uri() . '/js/bootstrap-datepicker3.fr.min.js', array( 'jquery' ), '3.2.0', true );
+	wp_enqueue_script( 'whispa-bootstrapdatapickerjs', get_template_directory_uri() . '/js/bootstrap-datepicker.min.js', array( 'jquery' ), '3.2.0', true );
+	wp_enqueue_script( 'whispa-bootstrapdatapickerfrjs', get_template_directory_uri() . '/js/bootstrap-datepicker.fr.min.js', array( 'jquery' ), '3.2.0', true );
 	wp_enqueue_script( 'whispa-inscriptionjs', get_template_directory_uri() . '/js/inscription.js', array( 'jquery' ), '3.2.0', true );
 }
 
