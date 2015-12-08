@@ -1105,7 +1105,25 @@ form#inscription_form h2 {
 	text-decoration: underline;
 }
 
-
 .comment-respond label {
   width: 15em;
+}
+
+/* author page */
+#author { line-height: 2;}
+
+#author .site-content img {
+  float: left;
+  margin-right: 10px;
+}
+#author .site-content img {
+  float: left;
+  margin-right: 10px;
+}
+#author .site-content h2 {
+  margin-top: 0px;
+  clear: none;
+}
+#author a.entry-title {
+  font-size: 12px;
 }
