@@ -17,7 +17,25 @@ get_header(); ?>
     <div class="container contact">
       <div class="row">
         <h1 class="text-center">Inscription &agrave; WHISPA</h1>
-          <div class="row text-center" id="info-envoi"></div>
+
+        <?php while ( have_posts() ) : the_post(); ?>
+
+          <article id="post-<?php the_ID(); ?>" <?php post_class("col-md-6 col-md-offset-3 col-xs-12"); ?>>
+            <h1 class="text-center"><?php the_title(); ?></h1>
+
+            <div class="entry-content">
+              <?php the_content(); ?>
+              <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'whispa' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+            </div><!-- .entry-content -->
+
+            <footer class="entry-meta">
+              <?php edit_post_link( __( 'Edit', 'whispa' ), '<span class="edit-link">', '</span>' ); ?>
+            </footer><!-- .entry-meta -->
+          </article><!-- #post -->
+
+        <?php endwhile; ?>
+
+          <!--div class="row text-center" id="info-envoi"></div>
           <iframe name="my_iframe" id="my_iframe" style="display:none;"></iframe>
           <form class="col-md-6 col-md-offset-3 col-xs-12" id="inscription_form" action="https://docs.google.com/forms/d/1XCdpNfvBhK7wsCa_2rdJbMAgkTjhSVriKOz_uk_rBeQ/formResponse" method="POST" target="my_iframe" data-parsley-validate>
             <h2>Informations personnelles</h2>
@@ -159,7 +177,7 @@ get_header(); ?>
             <p>
               <button id="submit" class="btnRose btnContact" type="submit">Envoyer</button>
             </p>
-          </form>
+          </form-->
         </div>
     </div>
 

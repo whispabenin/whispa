@@ -1127,3 +1127,98 @@ form#inscription_form h2 {
 #author a.entry-title {
   font-size: 12px;
 }
+
+
+
+/* Gravity form for newsletter gform_1 */
+
+#gform_2 {
+  width: 260px;
+}
+
+#gform_2 .gform_heading .gform_title {
+  display: none;
+}
+
+#gform_2 .gform_heading .gform_description {
+  clear: both;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  height: 13px;
+  line-height: 13.1999998092651px;
+  width: 200px;
+}
+
+#gform_2 .gform_body {
+  display: inline-block;
+}
+
+#gform_2 .gfield_label{
+  display: none !important;
+}
+
+#gform_2 .gform_body li.gfield {
+  height: 43px !important;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+#gform_2 .gform_body .gform_fields{
+  width: 160px;
+  height: 43px;
+}
+
+#gform_2 .gform_body .ginput_container{
+  width: 170px;
+  margin-top: 10px !important;
+  position: relative;
+  bottom: 10px;
+}
+
+#gform_2 .gform_body input{
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(204, 204, 204) 1px;
+  box-shadow: rgb(238, 238, 238) 0px 1px 3px 0px inset;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px !important;
+  color: #555;
+  height: 43px;
+  width: 100%;
+  padding: 6px 12px !important;
+  margin-bottom: 10px;
+}
+
+#gform_2 .gform_footer {
+  display: inline;
+}
+
+#gform_2 .help-block .gfield_description.validation_message{
+  color: #b94a48;
+  background-color: #f2dede;
+  border: #eed3d7 solid 1px;
+  border-radius: 2px;
+  padding: 10px !important;
+  width: 297px;;
+}
+
+#gform_2 .gform_button {
+  background-color: #16B84E;
+  width: 35%;
+  height: 43px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  cursor: pointer;
+  display: inline-block !important;
+  font-family: 'Open Sans', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}

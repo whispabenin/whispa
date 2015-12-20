@@ -11,11 +11,19 @@
  */
  ?>
 		<div class="col-sm-offset-1 col-sm-3">
-			<p>Recevoir par email les dernières nouvelles de WHISPA
+
+        <?php query_posts('page_id=115'); if(have_posts()) : the_post(); ?>
+          <?php the_content(); ?>
+        <?php endif; ?>
+
+        <br>
+
+			<!--p>Recevoir par email les dernières nouvelles de WHISPA
 			<form class="search">
 				<input type="text" placeholder="Email">
 	       		<input type="submit" value="S'abonner">
-	   		</form>
+	   		</form-->
+
 	   		<p>Suivez-nous sur</p>
 	   		<ul class="blog_sociaux">
 		  		<li><a href="https://www.facebook.com/whispaBenin"><i class="icon-facebook-2 facebook"></i></a></li>

@@ -30,7 +30,22 @@ get_header(); ?>
         </div>
         <div class="col-md-7">
           <h2 class="underlined">Nous Contacter</h2>
-          <iframe src="" id="my_iframe" name="my_iframe"></iframe>
+
+
+          <?php while ( have_posts() ) : the_post(); ?>
+            <article id="post-<?php the_ID(); ?>">
+              <div class="entry-content">
+                <?php the_content(); ?>
+                <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'whispa' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+              </div><!-- .entry-content -->
+
+              <footer class="entry-meta">
+                <?php edit_post_link( __( 'Edit', 'whispa' ), '<span class="edit-link">', '</span>' ); ?>
+              </footer><!-- .entry-meta -->
+            </article><!-- #post -->
+        <?php endwhile; ?>
+
+          <!--iframe src="" id="my_iframe" name="my_iframe"></iframe>
           <div class="row" id="info-envoi"></div>
           <form action="https://docs.google.com/forms/d/1Bo0Gbaa4lKh_ytG1ZQIxSzbdSZWCQ20htZQ2dARlT7g/formResponse" target="my_iframe" method="POST" id="contact_form" data-parsley-validate>
             <div class="row">
@@ -59,9 +74,9 @@ get_header(); ?>
             </div>
             <p>
               <!--a class="btnRose btnContact" onclick="postContactToGoogle()"> Envoyer </a-->
-              <button class="btnRose btnContact" type="submit" >Envoyer</button>
+              <!--button class="btnRose btnContact" type="submit" >Envoyer</button>
             </p>
-          </form>
+          </form-->
         </div>
       </div>
     </div>

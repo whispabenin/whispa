@@ -150,16 +150,15 @@ function whispa_scripts_styles() {
 		wp_enqueue_script( 'jquery-masonry' );
 
 	// Loads JavaScript file with functionality specific to Boot Ship.
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
+        wp_enqueue_script('jquery');
 
-	//loads jquery with cdn (from google)
-	wp_deregister_script('jquery');
-  wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", false, null);
-  wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'whispa-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-08-09', true );
 	wp_enqueue_script( 'whispa-bootstrapjs', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.2.0', true );
 
-/* Load our scripts */
+/* Load our scripts *
 if ( (is_page_template('whispa-inscription.php')) || (is_page_template('whispa-contact.php')) ) {
 	wp_enqueue_script( 'whispa-parsleyjs', get_template_directory_uri() . '/js/parsley.js', array( 'jquery' ), '3.2.0', true );
 	wp_enqueue_script( 'whispa-parsleyi18nfrjs', get_template_directory_uri() . '/js/i18n/fr.js', array( 'jquery' ), '3.2.0', true );
@@ -174,6 +173,7 @@ if ( is_page_template('whispa-inscription.php') ) {
 if ( is_page_template('whispa-contact.php') ) {
 	wp_enqueue_script( 'whispa-contactjs', get_template_directory_uri() . '/js/contact.js', array( 'jquery' ), '3.2.0', true );
 }
+*/
 /* End our scripts loading */
 
 
@@ -555,19 +555,26 @@ function whispa_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'whispa_customize_register' );
 
+/**
+ * Enqueue analytics script
+ *
+ * @since Whispa 1.0
+ */
+function whispa_analytics() {
+  ?>
+  <script type="text/javascript">
 
-/* Query page auteur */
-function my_post_queries( $query ) {
-    // vérifier qu'on n'est pas sur une page admin
-    if ( !is_admin() && $query->is_main_query() ) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        if ( is_author() ) {
+    ga('create', 'UA-66527126-1', 'auto');
+    ga('send', 'pageview');
 
-            // montrer tous les articles
-            $query->set( 'posts_per_page', -1 );
-            $query->set( 'post_type', array( 'post' ) );
-        }
+  </script>
+  <?php
 
-    }
 }
-add_action( 'pre_get_posts', 'my_post_queries' );
+
+add_action('wp_head', 'whispa_analytics');
