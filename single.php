@@ -28,6 +28,16 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
+
+				<div class="profil">
+					<h4>A propos de l'auteur:</h4>
+					<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
+					<?php echo substr( get_the_author_meta('user_description') , 0 , 230 ); ?>
+					<br>
+					<a class="entry-title" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">En savoir plus...</a>
+				</div>
+
+
 			</div>
 			<?php get_sidebar(); ?>
 
