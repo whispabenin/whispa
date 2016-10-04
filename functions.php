@@ -158,7 +158,8 @@ function whispa_scripts_styles() {
 	wp_enqueue_script( 'whispa-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '2014-08-09', true );
 	wp_enqueue_script( 'whispa-bootstrapjs', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), '3.2.0', true );
 
-/* Load our scripts *
+/* Load our scripts */
+/*
 if ( (is_page_template('whispa-inscription.php')) || (is_page_template('whispa-contact.php')) ) {
 	wp_enqueue_script( 'whispa-parsleyjs', get_template_directory_uri() . '/js/parsley.js', array( 'jquery' ), '3.2.0', true );
 	wp_enqueue_script( 'whispa-parsleyi18nfrjs', get_template_directory_uri() . '/js/i18n/fr.js', array( 'jquery' ), '3.2.0', true );
@@ -554,7 +555,6 @@ function whispa_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'whispa_customize_register' );
-
 /**
  * Enqueue analytics script
  *
@@ -574,6 +574,7 @@ function whispa_analytics() {
 
   </script>
   <?php
+
 
 }
 

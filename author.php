@@ -19,13 +19,14 @@ get_header(); ?>
 
 				<h2>A propos de: <?php echo $curauth->nickname; ?></h2>
 
-				<?php echo get_avatar( $curauth->user_email ); ?>
+                                <?php echo get_avatar( $curauth->user_email ); ?>
 
+				
 				<?php echo $curauth->user_description; ?>
 			</div>
 
 
-			<?php if ( have_posts() ) : ?>
+						<?php if ( have_posts() ) : ?>
 				<div class="col-sm-offset-1 col-sm-3">
 					<h4>Les articles de <?php echo $curauth->nickname; ?>:</h4>
 					<ul>
@@ -39,7 +40,6 @@ get_header(); ?>
 			<?php else : get_sidebar(); ?>
 
 			<?php endif; ?>
-
 		</div>
 	</div>
 

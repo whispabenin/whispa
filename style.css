@@ -11,7 +11,7 @@ Tags: blue, black, white, light, one-column, two-columns, right-sidebar, fluid-l
 Text Domain: WHISPA
 
 This theme is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Use it to make something cool, have fun, and share what you've learnedco with others.
 */
 
 
@@ -116,9 +116,6 @@ a:hover {
 	outline: 0;
 }
 
-a:hover {
-	text-decoration: underline;
-}
 
 h1,
 h2,
@@ -391,13 +388,6 @@ ins {
 	text-decoration: none;
 }
 
-hr {
-	background: url(images/dotted-line.png) repeat center top;
-	background-size: 4px 4px;
-	border: 0;
-	height: 1px;
-	margin: 0 0 24px;
-}
 
 
 /**
@@ -525,7 +515,9 @@ img {
 }
 
 figure.wp-caption.alignleft,
-img.alignleft {
+img.alignleft 
+
+{
 	margin: 5px 20px 5px 0;
 }
 
@@ -602,35 +594,86 @@ img{
 a{
 	color:#F02475;
 }
-a:hover,
-a:active {
-	color:#F02475;
-	text-decoration: underline;
-}
-
 button,
 button:hover,
 button:active{
-	border: none;
+	border:1px solid #fff;
+	background:#fff;
+	color:#f02475
+}
+body{
+	background-color: #fbfcfd;
 }
 
 .navbar {
 	margin-bottom: 0;
+	background: #000;
+	border-bottom: 1px solid #fff;
+	height: 60px;
+	font-family: 'Source Sans Pro', sans-serif; 
 }
 
 .form-control {
 	border-radius: 0;
 }
 
+
+/************************************
+ * registration form
+ ************************************/
+.gform_wrapper ul.gfield_checkbox li, .gform_wrapper ul.gfield_radio li {
+    overflow: visible !important;
+}
+
+.gform_wrapper .gfield_checkbox li label,
+.gform_wrapper .gfield_radio li label {
+  position: relative;
+}
+
+.gform_wrapper #gform_submit_button_1, #gform_submit_button_3 {
+	border-color:#F02475;
+}
+
+.help-block {
+ width: 100% !important; 
+}
+
+.gfield_description.validation_message {
+ margin: 0 !important;
+ padding: 0 !important; 
+}
+.gform_wrapper #input_1_3, #input_1_23 {
+  width: 100% !important; 
+}
+
+.gform_wrapper select {
+  -webkit-border-radius: 0px !important;
+}
+.gfield_radio label,
+.gfield_checkbox label {
+  padding-left: 20px !important;
+}
+.gfield_radio label input,
+.gfield_checkbox label input {
+  margin-left: -20px !important;
+}
+
 #header {
-  background: url('images/bg.jpg') no-repeat fixed center 12%transparent;
+  background: url('images/bg.jpg') no-repeat fixed center;
   height: 370px;
   text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+background-size: cover;
 }
+
 #header.inscription {
   background: none;
   height: 0;
 }
+
+
 div#header.home{
 	height: 560px;
 }
@@ -639,12 +682,32 @@ div#header.home{
 	width: 100%;
 	height: 560px;
 }
-#about h2{
-	 font-size: 24px;
-	 margin: 20px 0;
+#about{
+	padding: 60px 0;
 }
+
+#about h2{
+ font-size: 30px;
+ font-family: 'Open Sans Condensed', sans-serif;
+ font-weight: 500;
+ margin: 0 0 30px;
+}
+.carousel-inner{
+	margin: 0 auto;	
+	max-width: 720px;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  margin-left: 110px !important;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  margin-right: 110px !important;
+}
+
 #about p {
-	font-size: 14px;
+	font-size: 15px;
+	font-family: "open sans", "sans-serif"; 
+	margin: 30px 0;
 }
 .navbar-right li {
 	font-size: 14px;
@@ -686,8 +749,11 @@ div#header.home{
 }
 
 #testimonials p {
-	margin-bottom: 10px;
 	font-size: 18px;
+	margin: 0 0 60px;
+
+}
+#testimonials .container-fluid{
 
 }
 .collapse ul a{
@@ -703,27 +769,45 @@ div#header.home{
 	margin: 30px 0;
 }
 
-.btnRose{
+.gform_footer .btn-primary,
+.btnRose {
 	background-color: #F02475;
 	color: #FFFFFF;
 	font-size: 24px;
 	padding: 8px 20px;
 	display: inline-block;
-	border: none;
 	line-height: 1;
+	font-family: "open sans", "sans-serif";
+}
+.btnBorder {
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 8px 20px;
+    display: inline-block;
+    line-height: 1;
+    font-family: "open sans", "sans-serif";
+    background: none;
+    border: 1px solid #fff;
+    margin: 30px 0 0;
+}
+.gform_footer .btn-primary {
+  border-radius: 0;
+  float: none !important;
 }
 
 #testimonials .break .btnRose {
 margin-top: 8%;
 }
 
+#testimonials {
+	padding: 60px 0 80px;
+}
+
 .navbar .container li a {
 	color: #f02475;
 }
 
-#slide{
 
-}
 .container h1{
 	line-height: 1.5;
 }
@@ -733,14 +817,8 @@ margin-top: 8%;
 .fa-quote-left{
 	font-size:40px;
 }
-
-hr {
-	border-color: #F02475;
-	opacity:0.2;
-}
 .cadre{
 	border:1px solid rgba(240, 36, 117, 0.1);
-	margin-top: 60px;
 	padding: 15px;
 }
 .entry-meta{
@@ -795,15 +873,16 @@ hr {
 }
 
 .container .col-margin{
-	background-color: rgba(255,255,255,0.7);
-	padding: 20px;
-	width: 66%;
-	margin: 20% auto 15% auto;
-	min-height: 30%;
+  background-color: rgba(255,255,255,0.7);
+  padding: 20px;
+  width: 66%;
+  margin: 10% auto 50% auto;
+  min-height: 50%;
 }
 
 .espace {
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .row.espace {
@@ -832,6 +911,7 @@ h1.header-title {
 	margin-bottom: 20px;
 	font-size: 2.5em;
 	font-weight: lighter;
+	font-family: 'Source Sans Pro', sans-serif; 
 }
 .col-margin .benefits-title {
 	margin-top: 10px;
@@ -841,11 +921,7 @@ h1.header-title {
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
-.break{
-	margin-top: 96px;
-	margin-bottom: 96px;
-	text-align: center;
-}
+
 .facebook{
 	color: #3b5998;
 }
@@ -853,18 +929,21 @@ h1.header-title {
 	color: #0084B4;
 }
 .partenaire{
-	width: 75px;
+	width: auto;
 	height: 50px;
 }
 .partenaire-title{
 	padding-left: 40px;
 }
 .lighter{
-	font-weight: lighter;
+	text-align: center;
+	font-weight:500;
 }
 .contact {
-	margin-top: 3%;
+	margin-top:60px auto;
 }
+
+.gform_footer .btn-primary,
 .btnContact {
 	width: 150px;
 	height: 40px;
@@ -874,16 +953,20 @@ h1.header-title {
 	margin: 20px 0 30px 0;
 	text-align: center;
 }
+.gform_footer .btn-primary:hover,
+.gform_footer .btn-primary:active,
 .btnContact:hover,
 .btnContact:active {
 	color: #fff;
 }
+
+.gform_body .gsection,
 h2.underlined{
 	color: #000;
 	font-weight: normal;
 	text-decoration: none;
-	padding-bottom: 10px;
-	border-bottom: 1px solid rgba(240, 36, 117, 0.2);
+	padding-bottom: 10px !important;
+	border-bottom: 1px solid rgba(240, 36, 117, 0.2) !important;
 }
 .marge-gauche{
 	margin-left: 5%;
@@ -923,6 +1006,9 @@ a.btnRose:active{
 	height: auto;
 	margin: 10px 0;
 	line-height: 2;
+}
+#whywhispa.carousel-indicators li{
+	display:none !important;
 }
 
 .carousel-indicators li{
@@ -968,7 +1054,8 @@ form#inscription_form h2 {
 	margin: 0 0 20px !important;
 	line-height: 1.6rem;
 	font-size: 1.2rem;
-	text-transform: uppercase;
+        text-transform: uppercase;
+
 }
 
 /************************************
@@ -976,7 +1063,7 @@ form#inscription_form h2 {
  ************************************/
 
 #footer {
-	border-top: 1px solid rgba(240, 36, 117, 0.2);
+	border-top: 1px solid rgba(240, 36, 117, 0.1);
 	padding: 10px 0 20px;
 	line-height: 3.5;
 }
@@ -1020,7 +1107,7 @@ form#inscription_form h2 {
 	}
 	#partner {
 		float: right;
-		max-width: 190px;
+		max-width: 310px;
 	}
 	#about .img_desc{
 		width: 100%;
@@ -1073,6 +1160,36 @@ form#inscription_form h2 {
 
 @media (min-width: 1200px) {
 }
+@media (max-width: 768px){
+	.entry-content h1, h2{
+		font-size:26px;
+		margin-right: 0px !important;
+	}
+	#about p{
+		margin: 0px 30px 0px 20px;
+	}
+	#avantages h2 {
+		font-size: 25px !important;
+	}
+	#formations img {
+    /* margin-top:50px !important; */
+    padding-right: 26px;
+    padding-left: 15px;
+    margin-top:0px !important;
+}
+#formations h3, p{
+	padding-right: 30px;
+  padding-left: 30px;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev{
+	margin-left: 0px !important;
+
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
+	margin-right: 0px !important
+}
+
+}
 
 /* improve style */
 #primary{
@@ -1097,6 +1214,7 @@ form#inscription_form h2 {
 .site-content article.post.content {
 	border: 1px solid rgba(240, 36, 117, 0.2);
 	padding: 1%;
+        line-height: 2;
 }
 /* Pour les menus actifs */
 .current-menu-item a {
@@ -1108,6 +1226,7 @@ form#inscription_form h2 {
   width: 15em;
 }
 
+
 /* author page */
 #author { line-height: 2;}
 
@@ -1116,16 +1235,15 @@ form#inscription_form h2 {
   float: left;
   margin-right: 10px;
 }
-
 #author .site-content h2 {
   margin-top: 0px;
   clear: none;
 }
+
 #author a.entry-title,
 .profil a.entry-title {
   font-size: 12px;
 }
-
 .profil {
     line-height: 2;
 }
@@ -1225,4 +1343,218 @@ form#inscription_form h2 {
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
+}
+
+/* pourquoi whispa */
+
+
+#whywhispa{
+	background-image:url('images/why-background.jpeg'); 
+	height: 500px;
+	color:#fff;
+	padding: 120px 0;
+}
+#underline{
+	border-bottom: 2px solid #fff;
+	/* text-align: center; */
+	width: 200px;
+	margin-left: 347px;
+	margin:auto;
+	margin-bottom: 30px;
+
+}
+#whywhispa h2{
+	font-size: 30px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight:500 !important;
+	margin: 0 0 30px;
+}
+
+#whywhispa p{
+	font-size: 18px;
+}
+
+#whywhispa .btnBorder a:hover , a:focus{
+	text-decoration: none;
+	color:#fff;
+}
+.carousel-control.right{
+	background-image: none;
+}
+
+.carousel-control.left{
+	background-image: none;
+}
+/* formations*/
+#formations{
+	padding: 60px 0;
+}
+#formations h2{
+  font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 500;
+  margin: 0 0 30px;
+}
+#formations h3{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+#formations img{
+	margin-top: 65px !important;
+}
+#formations p{
+	margin: 0 0 30px;
+}
+
+.line-separation{
+  max-width: 960px;
+  margin: 30px auto;
+  border: 1px solid #e6e6e6;
+  background-color: #e6e6e6;
+}
+
+ /*	Avantages;*/
+ #avantages{
+ 	background-color:rgba(220, 220, 220, 0.28);
+ 	padding: 60px 0;
+ }
+ #avantages h2{
+ 	font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 500;
+  margin: 0 0 30px;
+ }
+
+#avantages h3{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+#avantages i{
+	font-size: 64px;
+  background-color:#F02475;
+  color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+.margin-box{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+ /*	blog;*/
+ #news{
+ 	margin-top: 30px;
+ }
+ #news .box-content{
+ 	background: #f3f3f3;
+ }
+ #news h3 span{
+  background: #F02475;
+  color: #fff;
+  padding: 10px 30px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  display: inline-block;
+
+
+ }
+#news h3{
+  text-align: center;
+  border-bottom: 1px solid rgba(245, 115, 166, 0.32);
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+#news .entry-thumbnail .col-sm-6{
+	background-color: rgba(240, 36, 117, 0.05);
+}
+#news .site-content .post img {
+    width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    margin-left: 50px;
+}
+#news .col-sm-6{
+ width: 44%;
+}
+.leave-reply{
+	display: none;
+}
+#news .btn-rose{
+	color: #fff;
+  background: #F02475;
+  border: 1px solid #F02475;
+  padding:5px 15px;
+  margin-top: -80px;
+}
+.partner-logo #indigo {
+  margin-top:24px !important;
+}
+/*page programme*/
+body #programme{
+	background-color:rgba(220, 220, 220, 0.28);
+}
+.programme-content{
+	background: #fff;
+	padding: 30px;
+}
+.programme-content ul{
+	list-style-type: none !important;
+	margin:0;
+	padding:0;
+}
+.programme-content h2{
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:20px;
+	margin: 0 0 10px;
+
+}
+.programme-content h3{
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size:20px;
+	margin: 0 0 10px;
+
+}
+
+.programme-content hr{
+	width: 100%;
+	background-color: #f4f4ef;
+	margin-top: 30px !important;
+	margin-right: 50px;
+}
+.front-end{
+	margin-left: -2px;
+}
+
+.entry-content h1,h2{
+	font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 500;
+}
+.entry-content h1{
+	margin-right: 184px;
+}
+.entry-content p,h4{
+	font-size: 15px;
+  font-family: "open sans", "sans-serif";
+}
+/*participation form*/ 
+#input_4_1 label
+{
+	display: none;
+}
+
+.modal-body h3{
+	font-size: 25px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }

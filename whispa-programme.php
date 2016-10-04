@@ -7,7 +7,7 @@
  * @package WordPress
  * @since Whispa 1.0
  *
- * Template Name: programme
+ * Template Name: supprimer
  */
 
 get_header(); ?>

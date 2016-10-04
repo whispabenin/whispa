@@ -42,7 +42,6 @@ get_header(); ?>
 							</footer><!-- .entry-meta -->
 						</article><!-- #post -->
 
-						<?php comments_template(); ?>
 					<?php endwhile; ?>
 
 					</div>

@@ -15,6 +15,7 @@
 
 get_header(); ?>
 <!---contenu de cours-->
+
 	<div class="container">
 		<div id="primary" class="row">
 			<div class="site-content col-sm-8">

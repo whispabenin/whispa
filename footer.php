@@ -9,7 +9,7 @@
  */
 ?>
 
-
+		
  <div id="footer" class="container-fluid">
 			<div class="container">
 				<div class="row">
@@ -17,8 +17,11 @@
 							<div class="partner-title col-md-12"><span>Partenaires:</span></div>
 							<div class="partner-logo col-md-12">
 								<ul class="partenaires">
-		  						<li><a href="http://www.etrilabs.com/"><img class="partenaire" src="<?php echo get_template_directory_uri(); ?>/images/etrilabs.png" alt="Etrilabs"></a></li>
+                  <li><a href="http://www.etrilabs.com/"><img class="partenaire" src="<?php echo get_template_directory_uri(); ?>/images/etrilabs.png" alt="Etrilabs"></a></li>
+
 		  						<li><a href="http://www.tekxl.com/"><img class="partenaire" src="<?php echo get_template_directory_uri(); ?>/images/tekxl.png" alt="TEKXL LLC"></a></li>
+
+		  						<li><a href="http://www.tekxl.com/"><img id="indigo" class="partenaire" src="<?php echo get_template_directory_uri(); ?>/images/logo-indigo.png" alt="Indigo"></a></li>		  						
 		  					</ul>
 		  				</div>
   					</div>
@@ -36,5 +39,10 @@
 			</div><!--footer container-->
 		</div><!--footer-->
 		<?php wp_footer(); ?>
+		<script type="text/javascript">
+		$('#benefit').carousel({
+		  interval: false
+		})
+		</script>
 </body>
 </html>

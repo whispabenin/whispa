@@ -10,14 +10,12 @@
  * @since WHISPA 0.1
  */
  ?>
-		<div class="col-sm-offset-1 col-sm-3">
-
-        <?php query_posts('page_id=115'); if(have_posts()) : the_post(); ?>
-          <?php the_content(); ?>
-        <?php endif; ?>
-
-        <br>
-
+		<div class=" col-sm-offset-1 col-sm-3">
+                    <?php query_posts('page_id=115'); if(have_posts()) : the_post(); ?>
+                     <?php the_content(); ?>
+                    <?php endif; ?>
+                    
+                    <br>
 			<!--p>Recevoir par email les dernières nouvelles de WHISPA
 			<form class="search">
 				<input type="text" placeholder="Email">
@@ -30,3 +28,4 @@
 		  		<li><a href="https://twitter.com/whispabenin"><i class="icon-twitter-2 twitter"></i></a></li>
 		  	</ul>
 		</div>
+

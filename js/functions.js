@@ -136,7 +136,6 @@
         e.preventDefault();
 
         //do stuff
-        console.log('inscription');
         ga('send', 'event', 'form', 'submit','FORM_INSCRIPTION');
 
         //use the native submit so we wont trigger
@@ -147,7 +146,6 @@
     //analytics for newsletter
     $('#gform_2').on('submit', function(e) {
       e.preventDefault();
-      console.log('newsletter');
       ga('send', 'event', 'form', 'submit','FORM_NEWSLETTER');
       this.submit();
     });
@@ -155,12 +153,9 @@
     //analytics for contact form
     $('#gform_3').on('submit', function(e) {
       e.preventDefault();
-      console.log('contact');
       ga('send', 'event', 'form', 'submit','FORM_CONTACT');
       this.submit();
     });
 
-   /**
-    *
-   */
+
 } )( jQuery );
